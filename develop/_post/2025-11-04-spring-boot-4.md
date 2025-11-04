@@ -42,11 +42,11 @@ sitemap: false
 3.	스타터 재정비
 •	spring-boot-starter-web ➜ spring-boot-starter-webmvc (WebFlux면 그에 맞는 스타터)
 •	DB 마이그/관리는 전용 스타터 필수(예: spring-boot-starter-flyway).
-•	각 스타터에 -test를 test scope로 추가.  ￼
-4.	Classic 스타터로 임시 올림 → 모듈별로 점진 분해(대규모 레포/사내 공용 스타터가 있을 때 특히 유용).  ￼
-5.	OTel·관측성 설정 재검토(새 스타터로 간소화, Redis 메트릭/트레이싱 확인).  ￼
-6.	빌드 도구 업데이트: Gradle 9 지원 확인.  ￼
-7.	테스트/런타임 호환성: Jackson 3, JUnit 6 도입에 따른 테스트 유틸/모킹 라이브러리 호환 확인.  ￼
+•	각 스타터에 -test를 test scope로 추가.  
+4.	Classic 스타터로 임시 올림 → 모듈별로 점진 분해(대규모 레포/사내 공용 스타터가 있을 때 특히 유용).  
+5.	OTel·관측성 설정 재검토(새 스타터로 간소화, Redis 메트릭/트레이싱 확인).  
+6.	빌드 도구 업데이트: Gradle 9 지원 확인.  
+7.	테스트/런타임 호환성: Jackson 3, JUnit 6 도입에 따른 테스트 유틸/모킹 라이브러리 호환 확인.  
 
 ---
 
