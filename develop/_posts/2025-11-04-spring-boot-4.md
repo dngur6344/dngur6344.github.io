@@ -3,7 +3,7 @@ layout: post
 title: Spring Boot version 4
 description: >
   Spring boot 4 is the latest major release of the popular Java framework for building web applications and microservices.
-image: /assets/img/develop/spring-boot-4.jpg
+image: /assets/img/develop/spring-boot-4.png
 sitemap: false
 ---
 
