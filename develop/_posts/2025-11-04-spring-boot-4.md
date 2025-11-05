@@ -6,7 +6,7 @@ description: >
 image: /assets/img/develop/spring-boot-4.png
 sitemap: false
 ---
-
+# Spring Boot version 4
 ## 플랫폼/베이스라인 변화
 •	Spring Framework 7 기반: 이번 메이저는 전부 Spring Framework 7 위에서 돌아가. SF7은 JDK 17을 최소로 유지하면서도 JDK 25 LTS까지 적극 권장하고, Jakarta EE 11(Tomcat 11, Hibernate ORM 7, Validator 9)을 베이스로 잡아.  
 •	Java 버전: Boot 4 자체도 Java 17+ 필요(가능하면 최신 LTS 권장). Kotlin은 2.x (2.2+) 권장·지원. GraalVM Native는 25 세대를 권장.  
