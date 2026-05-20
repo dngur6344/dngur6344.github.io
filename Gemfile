@@ -42,6 +42,7 @@ gem "webrick"
 # gem "classifier-reborn"
 
 group :jekyll_plugins do
+  gem "jekyll-remote-theme"
   gem "jekyll-default-layout"
   gem "jekyll-feed"
   gem "jekyll-optional-front-matter"
@@ -61,4 +62,3 @@ end
 
 gem 'wdm' if Gem.win_platform?
 gem "tzinfo-data" if Gem.win_platform?
-
