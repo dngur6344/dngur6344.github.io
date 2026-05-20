@@ -20,37 +20,42 @@
 lang:                  ko-kr
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 WooHyuk's Blog
+title:                 나를 구성하는 별들
+short_title:           나를 구성하는 별들
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Welcome to my blog! Here, I share insights on web development, programming, and technology trends.
+  WooHyuk의 마크다운 블로그.
 
 # A shorter description for the sidebar.
-tagline:               Hello World
+tagline:               '@dngur6344'
 
 # A list of keywords for your blog
-keywords:              []
+keywords:              [blog, coffee, development, science, essay]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
 #logo:                  /assets/img/logo.png
-logo:                  /assets/img/img.png
+logo:                  /assets/img/coffee-logo.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                WooHyuk
+  email:               ''
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # Add links to the sidebar.
 menu:
-  - title:             Develop
+  - title:             글 모음
+    url:               /posts/
+  - title:             DEVELOP
     url:               /develop/
+  - title:             SCIENCE
+    url:               /science/
 #  - title:             Documentation
 #    url:               /docs/
 #  - title:             About
@@ -81,24 +86,24 @@ paginate_path:         /:num/
 # ---------------------------------------------------------------------------------------
 
 # This will use the gem `jekyll-theme-hydejack`, as defined in the sibling `Gemfile`.
-#theme: jekyll-theme-hydejack
+theme: jekyll-theme-hydejack
 
 # You can uncomment `theme` above and replace it with `remote_theme` here iff you are using the 
 # `jekyll-remote-theme` plugin (which is the case when using the legacy GitHub Pages pipeline).
 # This will fetch the `v9` branch of the public Hydejack repository on GitHub.
-remote_theme: hydecorp/hydejack@v9
+# remote_theme: hydecorp/hydejack@v9
 
 # Customizaton
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/sidebar-bg.jpg
-accent_color:          rgb(79,177,186)
+accent_color:          rgb(158,105,67)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(25,55,71)
+theme_color:           rgb(8,10,17)
 
 # IMPORTANT:
 # As of Hydejack 9.2, Google Fonts are turned off by default due to a stronger focus on privacy.
@@ -112,11 +117,11 @@ theme_color:           rgb(25,55,71)
 
 # The text font. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-# font:                  Noto Sans, Helvetica, Arial, sans-serif
+font:                  -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-# font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
+font_heading:          Cafe24Oneprettynight, "Apple SD Gothic Neo", "Noto Serif KR", serif
 
 # The font used for code blocks. Expects a string that is a valid CSS font-family value. 
 # Defaults to the [System Monospace Font Stack](https://qwtel.com/posts/software/the-monospaced-system-ui-css-font-stack/).
@@ -183,7 +188,7 @@ kramdown:
 
 hydejack:
   # Configure the order of complementary content on blog posts
-  post_addons:         [about, newsletter, related, random, comments]
+  post_addons:         [about, related]
 
   # Configure the order of complementary content on project pages
   project_addons:      [about, newsletter, other, comments]
@@ -312,6 +317,7 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
+  - example
   - functions
 include:
   - _routes.json

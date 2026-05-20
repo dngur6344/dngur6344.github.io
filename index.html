@@ -1,11 +1,31 @@
 ---
-layout: blog
-title: Blog
+layout: page
+title: 나를 구성하는 별들
 description: >
-  The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll.
-last_modified_at: 2018-08-03
-no_link_title: false 
-no_excerpt: false 
-hide_image: false
-cover: true
+  WooHyuk의 마크다운 블로그.
+last_modified_at: 2026-05-19
+hide_description: true
 ---
+
+<section class="coffee-account" aria-label="계정 정보">
+  <a href="https://github.com/dngur6344" class="coffee-account-link no-mark-external">@dngur6344</a>
+</section>
+
+{% if site.posts.size > 0 %}
+<section class="coffee-posts" aria-label="최신 글">
+  <div class="coffee-section-head">
+    <h2>Posts</h2>
+  </div>
+
+  <div class="coffee-post-grid">
+    {% for post in site.posts limit:6 %}
+      <article class="coffee-post-card">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:"%Y.%m.%d" }}</time>
+        <h3>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
