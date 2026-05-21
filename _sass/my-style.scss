@@ -61,6 +61,7 @@ hr,
   overflow: hidden;
   background-position: center top;
   background-size: cover;
+  pointer-events: none;
 }
 
 .sidebar-bg::before {
@@ -145,8 +146,8 @@ hr,
   right: auto;
   width: auto;
   background: transparent;
-  z-index: 5;
-  pointer-events: none;
+  z-index: 30;
+  pointer-events: auto;
 }
 
 #_navbar > .content {
@@ -172,7 +173,6 @@ hr,
   box-shadow: 0 .75rem 2rem rgba(47, 33, 24, .12);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  pointer-events: auto;
 }
 
 #_navbar .nav-span {
@@ -204,6 +204,12 @@ hr,
 
 #_swipe {
   display: none;
+}
+
+@media screen and (min-width: 64em) {
+  #_navbar {
+    left: calc(var(--sidebar-width) + .75rem);
+  }
 }
 
 #_main.content {
