@@ -1,0 +1,7 @@
+{% if site.copyright.size > 0 %}
+<footer class="content" role="contentinfo">
+  <hr/>
+  <p><small class="copyright">{{ site.copyright | markdownify | replace:'<p>','' | replace:'</p>','' }}</small></p>
+  <hr class="sr-only"/>
+</footer>
+{% endif %}

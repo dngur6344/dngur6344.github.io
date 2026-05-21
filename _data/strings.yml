@@ -95,9 +95,8 @@ date_formats:
   resume:              '%b %Y'
 
 
-# PRO Version
+# Extended labels
 # ---------------------------------------------------------------------------------------
-# If you don't own the PRO version of Hydejack, modifying these will have no effect.
 
 welcome:
   more_projects:       See <!--projects_title--> for more
