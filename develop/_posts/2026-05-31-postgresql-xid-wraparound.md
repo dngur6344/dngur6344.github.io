@@ -191,6 +191,63 @@ body.dark-mode .wrap-table th {
   background: rgba(244, 234, 220, .12) !important;
 }
 
+body.dark-mode .wrap-table td {
+  color: #ead8c3 !important;
+  border-color: rgba(231, 212, 189, .18) !important;
+}
+
+body.dark-mode .wrap-table tbody tr:nth-child(odd) td {
+  background: rgba(255, 250, 242, .045) !important;
+}
+
+body.dark-mode .wrap-table tbody tr:nth-child(even) td {
+  background: rgba(255, 250, 242, .074) !important;
+}
+
+body.dark-mode .wrap-table td:first-child {
+  color: #f2c98c !important;
+}
+
+body.dark-mode .wrap-table code {
+  color: #fff4e5 !important;
+  background: rgba(255, 250, 242, .08) !important;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body:not(.light-mode) .wrap-table {
+    background: rgba(9, 13, 22, .86) !important;
+    border-color: rgba(231, 212, 189, .24) !important;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .22) !important;
+  }
+
+  body:not(.light-mode) .wrap-table th {
+    color: #fff4e5 !important;
+    background: rgba(244, 234, 220, .12) !important;
+  }
+
+  body:not(.light-mode) .wrap-table td {
+    color: #ead8c3 !important;
+    border-color: rgba(231, 212, 189, .18) !important;
+  }
+
+  body:not(.light-mode) .wrap-table tbody tr:nth-child(odd) td {
+    background: rgba(255, 250, 242, .045) !important;
+  }
+
+  body:not(.light-mode) .wrap-table tbody tr:nth-child(even) td {
+    background: rgba(255, 250, 242, .074) !important;
+  }
+
+  body:not(.light-mode) .wrap-table td:first-child {
+    color: #f2c98c !important;
+  }
+
+  body:not(.light-mode) .wrap-table code {
+    color: #fff4e5 !important;
+    background: rgba(255, 250, 242, .08) !important;
+  }
+}
+
 body.light-mode .wrap-table {
   background: rgba(255, 250, 242, .88) !important;
   border-color: rgba(143, 94, 60, .32) !important;
