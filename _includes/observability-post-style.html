@@ -1,0 +1,276 @@
+<style>
+.obs-visual {
+  --obs-bg: linear-gradient(135deg, rgba(47, 33, 24, .94), rgba(8, 12, 24, .96));
+  --obs-panel: rgba(255, 250, 242, .075);
+  --obs-panel-strong: rgba(255, 250, 242, .12);
+  --obs-line: rgba(255, 250, 242, .18);
+  --obs-ink: #fffaf2;
+  --obs-muted: rgba(255, 250, 242, .72);
+  --obs-gold: #d8b16f;
+  --obs-blue: #8fb4d9;
+  --obs-green: #8fbf9b;
+  --obs-red: #d98989;
+  margin: 1.2rem 0 1.55rem;
+  padding: .95rem;
+  border: 1px solid rgba(255, 250, 242, .12);
+  border-radius: 8px;
+  color: var(--obs-ink);
+  background: var(--obs-bg);
+  box-shadow: 0 1rem 2.4rem rgba(8, 10, 17, .18);
+}
+
+.obs-visual .obs-title {
+  margin: 0 0 .7rem;
+  color: var(--obs-ink);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.obs-visual .obs-grid,
+.obs-visual .obs-flow,
+.obs-visual .obs-lanes,
+.obs-visual .obs-route,
+.obs-visual .obs-notes {
+  display: grid;
+  gap: .65rem;
+}
+
+.obs-visual .obs-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.obs-visual .obs-grid.three,
+.obs-visual .obs-lanes {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.obs-visual .obs-flow {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.obs-visual .obs-route {
+  grid-template-columns: 1.05fr .9fr 1.15fr;
+  align-items: stretch;
+}
+
+.obs-visual .obs-notes {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.obs-visual .obs-card,
+.obs-visual .obs-step,
+.obs-visual .obs-note,
+.obs-visual .obs-lane {
+  min-width: 0;
+  border: 1px solid var(--obs-line);
+  border-radius: 6px;
+  background: var(--obs-panel);
+}
+
+.obs-visual .obs-card,
+.obs-visual .obs-note,
+.obs-visual .obs-lane {
+  padding: .72rem;
+}
+
+.obs-visual .obs-step {
+  position: relative;
+  padding: .62rem;
+}
+
+.obs-visual .obs-step:not(:last-child)::after {
+  content: "->";
+  position: absolute;
+  right: -.49rem;
+  top: 50%;
+  color: rgba(255, 250, 242, .58);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .66rem;
+  transform: translate(50%, -50%);
+}
+
+.obs-visual b,
+.obs-visual strong {
+  display: block;
+  color: var(--obs-ink);
+  font-size: .68rem;
+  line-height: 1.35;
+}
+
+.obs-visual span,
+.obs-visual p {
+  display: block;
+  margin: .2rem 0 0;
+  color: var(--obs-muted);
+  font-size: .62rem;
+  line-height: 1.45;
+}
+
+.obs-visual code {
+  color: var(--obs-ink);
+  background: rgba(8, 10, 17, .34);
+}
+
+.obs-visual .obs-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .65rem;
+}
+
+.obs-visual .obs-chip {
+  padding: .32rem .46rem;
+  border: 1px solid rgba(216, 177, 111, .35);
+  border-radius: 999px;
+  color: var(--obs-ink);
+  background: rgba(216, 177, 111, .12);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .56rem;
+}
+
+.obs-visual .obs-chip[data-tone="blue"] {
+  border-color: rgba(143, 180, 217, .38);
+  background: rgba(143, 180, 217, .13);
+}
+
+.obs-visual .obs-chip[data-tone="green"] {
+  border-color: rgba(143, 191, 155, .38);
+  background: rgba(143, 191, 155, .13);
+}
+
+.obs-visual .obs-chip[data-tone="red"] {
+  border-color: rgba(217, 137, 137, .38);
+  background: rgba(217, 137, 137, .12);
+}
+
+.obs-table {
+  width: 100%;
+  border: 1px solid rgba(143, 94, 60, .32);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255, 250, 242, .94) !important;
+  font-size: .88rem;
+}
+
+.obs-table th,
+.obs-table td {
+  border: 0;
+  border-bottom: 1px solid rgba(143, 94, 60, .22);
+  color: var(--coffee-ink) !important;
+  vertical-align: top;
+}
+
+.obs-table th {
+  background: rgba(47, 33, 24, .92) !important;
+  color: #fffaf2 !important;
+  font-weight: 700;
+}
+
+.obs-table tbody tr:nth-child(odd) td {
+  background: rgba(255, 250, 242, .92) !important;
+}
+
+.obs-table tbody tr:nth-child(even) td {
+  background: rgba(247, 236, 222, .94) !important;
+}
+
+.obs-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.obs-table td:first-child {
+  color: #4d2d1e !important;
+  font-weight: 700;
+}
+
+body.dark-mode .obs-table {
+  background: rgba(9, 13, 22, .9) !important;
+  border-color: rgba(231, 212, 189, .24) !important;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .22) !important;
+}
+
+body.dark-mode .obs-table th {
+  color: #fff4e5 !important;
+  background: rgba(244, 234, 220, .12) !important;
+}
+
+body.dark-mode .obs-table td {
+  color: #ead8c3 !important;
+  border-color: rgba(231, 212, 189, .18) !important;
+}
+
+body.dark-mode .obs-table tbody tr:nth-child(odd) td {
+  background: rgba(255, 250, 242, .045) !important;
+}
+
+body.dark-mode .obs-table tbody tr:nth-child(even) td {
+  background: rgba(255, 250, 242, .074) !important;
+}
+
+body.dark-mode .obs-table td:first-child {
+  color: #f2c98c !important;
+}
+
+body.dark-mode .obs-table code {
+  color: #fff4e5 !important;
+  background: rgba(255, 250, 242, .08) !important;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body:not(.light-mode) .obs-table {
+    background: rgba(9, 13, 22, .9) !important;
+    border-color: rgba(231, 212, 189, .24) !important;
+  }
+
+  body:not(.light-mode) .obs-table th {
+    color: #fff4e5 !important;
+    background: rgba(244, 234, 220, .12) !important;
+  }
+
+  body:not(.light-mode) .obs-table td {
+    color: #ead8c3 !important;
+    border-color: rgba(231, 212, 189, .18) !important;
+  }
+
+  body:not(.light-mode) .obs-table tbody tr:nth-child(odd) td {
+    background: rgba(255, 250, 242, .045) !important;
+  }
+
+  body:not(.light-mode) .obs-table tbody tr:nth-child(even) td {
+    background: rgba(255, 250, 242, .074) !important;
+  }
+
+  body:not(.light-mode) .obs-table td:first-child {
+    color: #f2c98c !important;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .obs-visual {
+    padding: .78rem;
+  }
+
+  .obs-visual .obs-grid.two,
+  .obs-visual .obs-grid.three,
+  .obs-visual .obs-lanes,
+  .obs-visual .obs-flow,
+  .obs-visual .obs-route,
+  .obs-visual .obs-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .obs-visual .obs-step:not(:last-child)::after {
+    content: "";
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -.47rem;
+    width: 1px;
+    height: .45rem;
+    background: rgba(255, 250, 242, .34);
+    transform: translateX(-50%);
+  }
+}
+</style>
