@@ -71,13 +71,13 @@ hr,
   inset: -8%;
   opacity: .72;
   pointer-events: none;
+  transform: translate3d(.2rem, -.12rem, 0) scale(1.01);
   background:
     radial-gradient(circle at 28% 18%, rgba(255, 250, 219, .9) 0 .06rem, transparent .12rem),
     radial-gradient(circle at 62% 28%, rgba(255, 250, 219, .78) 0 .05rem, transparent .11rem),
     radial-gradient(circle at 74% 44%, rgba(255, 250, 219, .86) 0 .05rem, transparent .12rem),
     radial-gradient(circle at 44% 56%, rgba(255, 250, 219, .7) 0 .05rem, transparent .11rem),
     radial-gradient(circle at 18% 68%, rgba(255, 250, 219, .74) 0 .04rem, transparent .1rem);
-  animation: coffee-stars 4.8s ease-in-out infinite alternate;
 }
 
 .sidebar-bg::after {
@@ -89,17 +89,6 @@ hr,
     linear-gradient(180deg, rgba(5, 8, 16, .08), rgba(5, 8, 16, .34) 46%, rgba(33, 18, 11, .72)),
     radial-gradient(circle at 52% 26%, rgba(214, 229, 223, .22), transparent 17rem),
     radial-gradient(circle at 28% 76%, rgba(199, 126, 72, .18), transparent 14rem);
-}
-
-@keyframes coffee-stars {
-  0% {
-    opacity: .36;
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  100% {
-    opacity: .88;
-    transform: translate3d(.6rem, -.4rem, 0) scale(1.02);
-  }
 }
 
 .sidebar .avatar {
