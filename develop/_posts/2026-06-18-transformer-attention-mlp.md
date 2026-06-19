@@ -20,8 +20,6 @@ Transformer를 처음 보면 이상한 이름들이 한꺼번에 나온다. Toke
 그 벡터를 MLP로 다시 해석하고 다음 층으로 보낸다.
 ```
 
-이 글은 Notion의 `Attention & MLP 요약`, `transformer 모델`, `CNN`, `CNN과 딥러닝`, `파라미터란?`, `LLM 토큰 가중치는 동적인가?`, `Memory Caching: RNNs with Growing Memory` 문서를 바탕으로 정리했다. 다만 세부 설명은 Transformer 원 논문과 CNN, RNN/LSTM, backpropagation의 대표 논문을 기준으로 다시 검증했다.
-
 <style>
 .transformer-visual {
   --tx-bg: linear-gradient(135deg, rgba(54, 34, 24, .96), rgba(8, 11, 25, .98));
